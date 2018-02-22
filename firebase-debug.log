@@ -1,0 +1,13 @@
+[debug] [2018-02-22T14:01:03.362Z] ----------------------------------------------------------------------
+[debug] [2018-02-22T14:01:03.365Z] Command:       /usr/local/Cellar/node/7.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-02-22T14:01:03.365Z] CLI Version:   3.17.4
+[debug] [2018-02-22T14:01:03.365Z] Platform:      darwin
+[debug] [2018-02-22T14:01:03.365Z] Node Version:  v7.5.0
+[debug] [2018-02-22T14:01:03.366Z] Time:          Thu Feb 22 2018 11:01:03 GMT-0300 (-03)
+[debug] [2018-02-22T14:01:03.366Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-22T14:01:03.379Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-22T14:01:03.379Z] > authorizing via signed-in user
+[debug] [2018-02-22T14:01:03.382Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/horoscope-c6c66  
+  
+ Thu Feb 22 2018 11:01:03 GMT-0300 (-03)
