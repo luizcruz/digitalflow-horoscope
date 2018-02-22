@@ -11,3 +11,30 @@
 [debug] [2018-02-22T14:01:03.382Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/horoscope-c6c66  
   
  Thu Feb 22 2018 11:01:03 GMT-0300 (-03)
+[debug] [2018-02-22T16:39:25.769Z] ----------------------------------------------------------------------
+[debug] [2018-02-22T16:39:25.773Z] Command:       /usr/local/Cellar/node/7.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2018-02-22T16:39:25.773Z] CLI Version:   3.17.4
+[debug] [2018-02-22T16:39:25.774Z] Platform:      darwin
+[debug] [2018-02-22T16:39:25.774Z] Node Version:  v7.5.0
+[debug] [2018-02-22T16:39:25.774Z] Time:          Thu Feb 22 2018 13:39:25 GMT-0300 (-03)
+[debug] [2018-02-22T16:39:25.774Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-22T16:39:25.835Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-22T16:39:25.835Z] > authorizing via signed-in user
+[debug] [2018-02-22T16:39:25.840Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-22T16:39:25.841Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/Xfsu_MaROQpC7Uuzz3hFvPLpMnLIomheMx6TJYS4N0k',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Feb 22 2018 13:39:25 GMT-0300 (-03)
+[debug] [2018-02-22T16:39:26.282Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-22T16:39:26.353Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/horoscope-c6c66  
+  
+ Thu Feb 22 2018 13:39:26 GMT-0300 (-03)
+[debug] [2018-02-22T16:39:27.532Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-22T16:39:27.533Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/horoscope-c6c66/tokens  
+  
+ Thu Feb 22 2018 13:39:27 GMT-0300 (-03)
+[debug] [2018-02-22T16:39:28.564Z] <<< HTTP RESPONSE 200

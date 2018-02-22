@@ -3,13 +3,15 @@
 process.env.DEBUG = 'actions-on-google:*';
 const App = require('actions-on-google').DialogflowApp;
 const functions = require('firebase-functions');
-const https = require("http");
+const https = require("node-fetch");
+
 
 
 // a. the action name from the make_name Dialogflow intent
 const NAME_ACTION = 'horoscope';
 // b. the parameters that are parsed from the make_name intent
 const SIGN_ARGUMENT = 'sign';
+
 
 
 exports.horoscope = functions.https.onRequest((request, response) => {
@@ -23,26 +25,26 @@ exports.horoscope = functions.https.onRequest((request, response) => {
 // c. The function that generates the silly name
   function horoscope (app) {
 
+
     let sign = app.getArgument(SIGN_ARGUMENT);
-    let horoscope_response = '';
+    var horoscope_response = '';
 	
+
 	const url =
 	  "http://sandipbgt.com/theastrologer/api/horoscope/" + sign + "/today/";
-	https.get(url, res => {
-	  res.setEncoding("utf8");
-	  let body = "";
-	  res.on("data", data => {
-	    body += data;
+	fetch(url)
+	  .then(response => {
+	    response.json().then(json => {
+	    	horoscope_response = `${json.horoscope}`;
+	    });
+	  })
+	  .catch(error => {
+	    console.log(error);
 	  });
-	  res.on("end", () => {
-	    body = JSON.parse(body);
-	    horoscope_response = `${body.horoscope}`;
-	    app.tell('Alright, horoscope for your sign today is:  ' + horoscope_response + '');
-	    
-	  });
-	});
 
+    
 
+    app.tell('Alright, horoscope for '+ sign +' today is:  ' + horoscope_response + '');
   }
 
   // d. build an action map, which maps intent names to functions
